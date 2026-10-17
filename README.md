@@ -101,7 +101,7 @@ The saved constellation comparison provides another visual view of the different
 The repository contains a [`requirements.txt`](requirements.txt) file for the Python environment. Use Python 3 with a working `venv` installation.
 
 ```bash
-# Clone (GitHub access is required while this repository is private)
+# Clone the public GitHub repository
 git clone https://github.com/rvincent22/ofdm-wireless-channel-model.git
 cd ofdm-wireless-channel-model
 
@@ -119,7 +119,7 @@ jupyter lab
 
 In JupyterLab, open the files in `notebooks/` and run each one from the top with **Kernel > Restart Kernel and Run All Cells**. The plotting code writes to `../results/` relative to the notebook working directory; run the notebooks with their working directory set to `notebooks/` so those paths resolve correctly.
 
-The notebooks use fixed random-number seeds for repeatable simulations. **A separate clean-environment, top-to-bottom reproduction check is part of the final repository validation and has not yet been recorded as completed here.**
+The notebooks use fixed random-number seeds for repeatable simulations. **All five notebooks were successfully executed cell by cell in sequence using a separate, freshly created Python environment with the declared dependencies installed. The numerical checks passed, and the expected plots were generated. This validation used direct Python cell execution rather than Jupyter's notebook execution client.**
 
 ## Repository layout
 
@@ -151,4 +151,7 @@ Possible extensions include pilot-assisted channel estimation, imperfect channel
 
 ## Project status
 
-Five modeling notebooks and their core figures have been implemented and reviewed. Final documentation, dependency verification, a clean-run reproducibility check, and repository housekeeping are the remaining publication steps.
+The five planned modeling notebooks are complete. The project includes multipath channel modeling, QPSK/OFDM transmission and reception, AWGN performance analysis, and ZF/MMSE equalizer comparisons.
+All five notebooks passed sequential code-cell execution in a separate clean Python environment. Their numerical validations passed, and the expected result figures were generated.
+The repository includes pinned project dependencies, documented assumptions and limitations, reproducible random seeds, and saved simulation figures.
+The core project is complete. Additional features described under Scope and limitations remain optional future work.
